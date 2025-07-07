@@ -28,12 +28,149 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "MainForm";
+            BtnSelectFolder = new Button();
+            TxtFolderPath = new TextBox();
+            BtnOrganize = new Button();
+            ChkOrganizeByType = new CheckBox();
+            ChkCleanMusicNames = new CheckBox();
+            ChkTrimSpaces = new CheckBox();
+            ChkReplaceUnderscores = new CheckBox();
+            ChkRemoveBrackets = new CheckBox();
+            GrpOptions = new GroupBox();
+            GrpOptions.SuspendLayout();
+            SuspendLayout();
+            // 
+            // BtnSelectFolder
+            // 
+            BtnSelectFolder.Anchor = AnchorStyles.Top;
+            BtnSelectFolder.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            BtnSelectFolder.Location = new Point(190, 20);
+            BtnSelectFolder.Name = "BtnSelectFolder";
+            BtnSelectFolder.Size = new Size(180, 35);
+            BtnSelectFolder.TabIndex = 0;
+            BtnSelectFolder.Text = "Select Folder";
+            BtnSelectFolder.UseVisualStyleBackColor = true;
+            BtnSelectFolder.Click += BtnSelectFolder_Click;
+            // 
+            // TxtFolderPath
+            // 
+            TxtFolderPath.BackColor = Color.White;
+            TxtFolderPath.BorderStyle = BorderStyle.FixedSingle;
+            TxtFolderPath.Location = new Point(30, 65);
+            TxtFolderPath.Name = "TxtFolderPath";
+            TxtFolderPath.ReadOnly = true;
+            TxtFolderPath.Size = new Size(500, 30);
+            TxtFolderPath.TabIndex = 1;
+            // 
+            // BtnOrganize
+            // 
+            BtnOrganize.Anchor = AnchorStyles.Bottom;
+            BtnOrganize.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            BtnOrganize.Location = new Point(178, 345);
+            BtnOrganize.Name = "BtnOrganize";
+            BtnOrganize.Size = new Size(200, 40);
+            BtnOrganize.TabIndex = 2;
+            BtnOrganize.Text = "Organize";
+            BtnOrganize.UseVisualStyleBackColor = true;
+            BtnOrganize.Click += BtnOrganize_Click;
+            // 
+            // ChkOrganizeByType
+            // 
+            ChkOrganizeByType.AutoSize = true;
+            ChkOrganizeByType.Location = new Point(20, 30);
+            ChkOrganizeByType.Name = "ChkOrganizeByType";
+            ChkOrganizeByType.Size = new Size(196, 27);
+            ChkOrganizeByType.TabIndex = 0;
+            ChkOrganizeByType.Text = "Organize files by type";
+            ChkOrganizeByType.UseVisualStyleBackColor = true;
+            // 
+            // ChkCleanMusicNames
+            // 
+            ChkCleanMusicNames.AutoSize = true;
+            ChkCleanMusicNames.Location = new Point(20, 63);
+            ChkCleanMusicNames.Name = "ChkCleanMusicNames";
+            ChkCleanMusicNames.Size = new Size(206, 27);
+            ChkCleanMusicNames.TabIndex = 1;
+            ChkCleanMusicNames.Text = "Clean music file names";
+            ChkCleanMusicNames.UseVisualStyleBackColor = true;
+            // 
+            // ChkTrimSpaces
+            // 
+            ChkTrimSpaces.AutoSize = true;
+            ChkTrimSpaces.Location = new Point(20, 96);
+            ChkTrimSpaces.Name = "ChkTrimSpaces";
+            ChkTrimSpaces.Size = new Size(255, 27);
+            ChkTrimSpaces.TabIndex = 2;
+            ChkTrimSpaces.Text = "Trim whitespace in file names";
+            ChkTrimSpaces.UseVisualStyleBackColor = true;
+            // 
+            // ChkReplaceUnderscores
+            // 
+            ChkReplaceUnderscores.AutoSize = true;
+            ChkReplaceUnderscores.Location = new Point(20, 129);
+            ChkReplaceUnderscores.Name = "ChkReplaceUnderscores";
+            ChkReplaceUnderscores.Size = new Size(280, 27);
+            ChkReplaceUnderscores.TabIndex = 3;
+            ChkReplaceUnderscores.Text = "Replace underscores with spaces";
+            ChkReplaceUnderscores.UseVisualStyleBackColor = true;
+            // 
+            // ChkRemoveBrackets
+            // 
+            ChkRemoveBrackets.AutoSize = true;
+            ChkRemoveBrackets.Location = new Point(20, 162);
+            ChkRemoveBrackets.Name = "ChkRemoveBrackets";
+            ChkRemoveBrackets.Size = new Size(308, 27);
+            ChkRemoveBrackets.TabIndex = 4;
+            ChkRemoveBrackets.Text = "Remove brackets and content inside";
+            ChkRemoveBrackets.UseVisualStyleBackColor = true;
+            // 
+            // GrpOptions
+            // 
+            GrpOptions.Controls.Add(ChkOrganizeByType);
+            GrpOptions.Controls.Add(ChkCleanMusicNames);
+            GrpOptions.Controls.Add(ChkTrimSpaces);
+            GrpOptions.Controls.Add(ChkReplaceUnderscores);
+            GrpOptions.Controls.Add(ChkRemoveBrackets);
+            GrpOptions.Font = new Font("Segoe UI", 10F, FontStyle.Regular);
+            GrpOptions.Location = new Point(30, 110);
+            GrpOptions.Name = "GrpOptions";
+            GrpOptions.Size = new Size(500, 210);
+            GrpOptions.TabIndex = 3;
+            GrpOptions.TabStop = false;
+            GrpOptions.Text = "Options";
+            // 
+            // MainForm
+            // 
+            AutoScaleDimensions = new SizeF(9F, 23F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            ClientSize = new Size(560, 410);
+            Controls.Add(GrpOptions);
+            Controls.Add(BtnOrganize);
+            Controls.Add(TxtFolderPath);
+            Controls.Add(BtnSelectFolder);
+            Font = new Font("Segoe UI", 10F);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            Name = "MainForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "ArG's Folder Organizer";
+            GrpOptions.ResumeLayout(false);
+            GrpOptions.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Button BtnSelectFolder;
+        private TextBox TxtFolderPath;
+        private Button BtnOrganize;
+        private CheckBox ChkOrganizeByType;
+        private CheckBox ChkCleanMusicNames;
+        private CheckBox ChkTrimSpaces;
+        private CheckBox ChkReplaceUnderscores;
+        private CheckBox ChkRemoveBrackets;
+        private GroupBox GrpOptions;
     }
 }
