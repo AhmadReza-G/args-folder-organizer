@@ -56,6 +56,9 @@ public partial class MainForm : Form
             if (ChkRemoveBrackets.Checked)
                 await FolderOrganizer.RemoveBracketsAsync(_selectedFolder);
 
+            if (ChkRemoveBrackets.Checked)
+                await FolderOrganizer.RenameAllMusicFilesByTagsAsync(_selectedFolder);
+
             MessageBox.Show(this,
                 "Organization complete!",
                 "Done",
